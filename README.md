@@ -1,0 +1,2 @@
+# SheHacksChi
+SheHacksChi Weekend
