@@ -70,10 +70,10 @@
   font-size: 2em;
 }
 .prev:after {
-  content: '\2190';
+  content: "\2039";
   display: block;
 }
 .next:after {
-  content: '\2192';
+  content: '\203a';
   display: block;
 }
