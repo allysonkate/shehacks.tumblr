@@ -14,7 +14,8 @@ var interval;
 var userTitle = "foo";
 var userDescription = "bar";
 var editor = CodeMirror(document.getElementById('editor'), {
-  value: "",
+  // value: "<html><head><style>h1{color:red}</style></head><body><h1>hello</html>",
+  value: '',
   mode: "text/html",
   lineNumbers: true,
   matchBrackets: true,
@@ -80,6 +81,7 @@ var saveUserChanges = function (value) {
 };
 var update = function () {
   var value = editor.getValue();
+  // value = tumblrBlocks(value);
   // remove previous iframe
   if ( preview.children.length > 0 ) {
     preview.removeChild( preview.firstChild );
@@ -94,8 +96,7 @@ var update = function () {
   // workaround for chrome bug
   // http://code.google.com/p/chromium/issues/detail?id=35980#c12
   value = value.replace( '<script>', '<script>if ( window.innerWidth === 0 ) { window.innerWidth = parent.innerWidth; window.innerHeight = parent.innerHeight; }' );
-  value = tumblrBlocks(value);
-  value = saveUserChanges(value);
+  // value = saveUserChanges(value);
   content.open();
   content.write( value );
   content.close();
