@@ -49,8 +49,36 @@
 .helper-tab {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
+  height: 40px;
+  width: 40px;
+  border-radius: 0 0 0 10px;
+  font-size: 1.5em;
+  font-weight: bold;
 }
+
+.helper--active .helper-tab:before {
+  content: "\203A";
+  display: inline-block;
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  -ms-transform: rotate(270deg));
+  transform: rotate(270deg);
+  position: relative;
+  top: -12px;
+  right: 1px;
+  font-size: 1.5em;
+}
+
+.helper--view .helper-tab:before {
+  content: "\00d7";
+  font-size: 1.5em;
+  position: relative;
+  top: -10px;
+  left: 1px;
+}
+
 .editor-tab {
   position: absolute;
   top: 0;
