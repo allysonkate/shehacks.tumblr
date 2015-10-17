@@ -138,6 +138,12 @@ h1.splash__head {
 .editor--active {
   left: 0;
 }
+.editor--active .editor-tab:before {
+  content:"\00d7";
+}
+.editor--view .editor-tab:before {
+  content:"\203A";
+}
 #editor .CodeMirror {
   height: 100%;
   font-size: 16px;
