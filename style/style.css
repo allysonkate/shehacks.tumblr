@@ -40,7 +40,6 @@ button:focus {
   width: 100vw;
   height: 100vh;
   z-index: 20;
-  padding: 3em 5em;
 }
 .splash {
   position: relative;
@@ -179,4 +178,7 @@ h1.splash__head {
   color: #f00;
   text-align: right;
   padding: 0px 20px;
+}
+.editor-wrapper {
+  overflow: scroll;
 }

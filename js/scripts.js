@@ -98,7 +98,9 @@ var update = function () {
   // http://code.google.com/p/chromium/issues/detail?id=35980#c12
   value = value.replace( '<script>', '<script>if ( window.innerWidth === 0 ) { window.innerWidth = parent.innerWidth; window.innerHeight = parent.innerHeight; }' );
   // value = saveUserChanges(value);
-  value = tumblrBlocks(value);
+  if( currentAct !== 9) {
+    value = tumblrBlocks(value);
+  };
   content.open();
   content.write( value );
   content.close();

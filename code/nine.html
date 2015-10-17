@@ -1,0 +1,235 @@
+<html>
+  <head>
+    <title>{Title}</title>
+    <link rel="shortcut icon" href="http://38.media.tumblr.com/tumblr_lu2dgqlfzG1qfoi4t.gif"> <!-- cute fav icon! -->
+    <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/oytklkk/wrSnwdme4/default-tumblr-theme-style.css">
+        {block:Description}
+        <meta name="description" content="{MetaDescription}" />
+    {/block:Description}
+    <style>
+      body {
+        background: color:#000;
+        background-image: url('https://media.giphy.com/media/3o85xx21mLxJ8hPFtu/giphy.gif');
+        background-attachment: fixed;
+        font-size: 14px /* select:Font Size */;
+        font-family: Arial /* select:Font Family */;
+      }
+      a {
+          color: #000;
+          text-decoration: none;
+      }
+      body, a:hover {
+        cursor: url(http://i1326.photobucket.com/albums/u655/jimeaguinaga/tumblr_meamgtADrz1rgpyeqo1_400_zps0236a3ad.png),
+        progress !important;}
+        ::-webkit-scrollbar{   height:12px;width:17px;background:#FFF7F9}::-webkit-scrollbar-thumb{   background-image:url(http://static.tumblr.com/xjqjg7j/2iylnr2aq/dottedbg.png);border:1px solid #FFCCD6; -webkit-border-radius:0ex; -webkit-box-shadow:0px 0px 0px rgba(0,0,0,0.75)}::-webkit-scrollbar-corner{ background:#transparent}
+    </style>
+    </head>
+    <body>
+      <div class="sidebar">
+        <img id="avatar" src="http://38.media.tumblr.com/avatar_15eade75161c_128.png" />
+        <h1 id="title">{Title}</h1>
+        {block:Description}
+          <div id="description">                                                               Hi! I'm a default theme. You can make me look awesome with this tutorial!
+<p>
+<img src="http://38.media.tumblr.com/tumblr_lmu1ipF3r01qcfn0j.gif"></p></div>
+        {/block:Description}
+        <div id="links">
+          <a class="link" href="http://facebook.com/user">My Facebook</a>
+          <a class="link" href="http://twitter.com/user">My Twitter</a>
+        </div>
+      </div>
+      <div id="content">
+        {block:PermalinkPage}<div class="permalinkpage">{block:PermalinkPage}
+          {block:Posts}{block:Text}
+            <article class="post text">
+              {block:Title}
+                <h3 id="headline"><a href="{Permalink}">{Title}</a></h3>
+              {/block:Title}
+                <div id="body">{Body}</div>
+              {/block:Text}{block:Photo}
+            <article class="post photo">
+              <a href="{Permalink}">
+               <img src="{PhotoURL-500}" alt="{PhotoAlt}"/></a>
+                {block:IndexPage}
+                {block:Caption}
+                  <div class="caption">{Caption}</div>
+                {/block:Caption}
+              {/block:IndexPage}
+            {/block:IndexPage}
+          {/block:Photo}{block:Panorama}
+          <article class="post panorama">
+            {LinkOpenTag}
+              <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+            {LinkCloseTag}{block:Caption}
+              <div class="caption">{Caption}</div>
+            {/block:Caption}
+          {/block:Panorama}{block:Photoset}
+          <article class="post photoset">
+            {Photoset-500}
+              {block:ifShowPhotoCaption}
+                {block:IndexPage}
+                  {block:Caption}
+                    <div class="caption">{Caption}</div>
+                  {/block:Caption}
+                {/block:IndexPage}
+              {/block:ifShowPhotoCaption}
+            {/block:Photoset}{block:Quote}
+            <article class="post quote">
+              <div id="quote">"{Quote}"</div>
+              {block:Source}
+                <div id="source">{Source}</div>
+              {/block:Source}
+            {/block:Quote}{block:Link}
+            <article class="post link">
+              <a href="{URL}" id="link" {Target}>
+               <div id="box">
+                {Name}
+               </div>
+              </a>
+              <a href="{URL}" id="link" {Target}>
+               <div id="visiblebox">
+                {Name}
+               </div>
+              </a>
+              {block:Description}
+                <div class="description">{Description}</div>
+              {/block:Description}
+            {/block:Link}{block:Chat}
+            <article class="post chat">
+              {block:Title}
+                <h3 id="headline"><a href="{Permalink}">{Title}</a></h3>
+              {/block:Title}
+              <div class="chat">
+                {block:Lines}
+                  <li class="{Alt} user_{UserNumber}">
+                    {block:Label}
+                      <span class="label">{Label}</span>
+                    {/block:Label}{Line}
+                  </li>
+                {/block:Lines}
+              </div>
+              {/block:Chat}{block:Video}
+              <article class="post video">
+                {block:IndexPage}
+                  <center>{Video-250}</center>
+                {/block:IndexPage}
+                {block:PermalinkPage}
+                  <center>{Video-500}</center>
+                {/block:PermalinkPage}
+                {block:IndexPage}
+                  {block:Caption}
+                    <div class="caption">{Caption}</div>
+                  {/block:Caption}
+                {/block:IndexPage}
+                <!-- </article>-->
+                {/block:Video}{block:Audio}
+            <article class="post audio">
+              <div id="none" style="opacity: 0;">
+                {block:AlbumArt}
+                  <img src="{AlbumArtURL}" />
+                {/block:AlbumArt}
+                <div style="{block:AlbumArt}margin-top: -58px;{/block:AlbumArt}" id="infos">
+                 {block:Artist}
+                  {Artist}
+                 {/block:Artist}
+                  {block:TrackName}{TrackName}
+                 {/block:TrackName}
+                </div>
+              </div>
+              <div id="cover">
+                {block:AlbumArt}
+                  <img src="{AlbumArtURL}" />
+                {/block:AlbumArt}
+                <div style="{block:AlbumArt}margin-top: -58px; background-color: rgba(0, 0, 0, 0.3);{/block:AlbumArt}" id="infos">
+                  {block:Artist}
+                    {Artist}
+                  {/block:Artist}
+                  {block:TrackName}
+                    <br />{TrackName}
+                  {/block:TrackName}
+                </div>
+                <div id="player">
+                  {AudioPlayerBlack}
+                </div>
+              </div>
+              {block:IndexPage}
+                {block:Caption}
+                  <div style="{block:AlbumArt} margin-top: 64px;{/block:AlbumArt}" id="caption">{Caption}</div>
+                {/block:Caption}
+              {/block:IndexPage}
+            {/block:Audio}
+          {block:Answer}
+          <article class="post answer">
+            <div class="question">
+            <img src="{AskerPortraitURL-48}">
+            <span id="asker">{Asker} asked:</span>
+            <div id="text">{Question}</div>
+          </div>
+          <div id="answer">{Answer}</div>
+            <!--</article>-->
+          {/block:Answer}
+          {block:IndexPage}
+          <div  style="display: none; display: block;"  class="control">
+            <a href="{Permalink}" title="Permalink Page" class="notes">{NoteCountWithLabel}</a>
+            <div id="buttons">
+              <div id="like">{LikeButton size="16" color="Black"}</div>
+              <div id="reblog">{ReblogButton size="16" color="Black"}</div>
+            </div>
+          </div>
+          {/block:IndexPage}
+        </article>
+        {block:PermalinkPage}
+         {block:Date}
+            {block:RebloggedFrom}
+            <div class="reblogs">
+                <div style="{block:ContentSource}width: 49%;{/block:ContentSource}" id="reblog">Reblogged from: <a target="_blank" href="{ReblogParentURL}">{ReblogParentName}</a></div>
+                {block:ContentSource}
+                <div id="source">Source: <a target="_blank" href="{SourceURL}">{SourceTitle}</a></div>
+                {/block:ContentSource}
+            </div>
+            {/block:RebloggedFrom}
+            <div class="notescontainer">
+              <div id="info">
+                  <div id="left">{DayOfMonthWithZero}.{MonthNumberWithZero}.{ShortYear}</div>
+                  <div id="center">{NoteCountWithLabel}</div>
+                  <div id="right">{TimeAgo}</div>
+              </div>
+              {block:Caption}
+            <div id="caption">
+            {/block:Caption}
+            {block:Caption}
+            </div>
+            {/block:Caption}
+            {block:HasTags}
+             <ul id="tags">
+               <li>
+                 <span id="lable">Tags:</span>
+               </li>
+              {block:Tags}
+              <li>
+                <a href="{TagURL}">#{Tag}</a>
+              </li>
+             {/block:Tags}
+             </ul>
+            {/block:HasTags}
+            {PostNotes}
+          </div>
+        </div>
+      {/block:Date}
+      {block:PermalinkPage}
+      {/block:Posts}
+      <div id="navigation">
+        {block:NextPage}
+          <div id="nextpage">
+            <a id="nextpagelink" href="{NextPage}">Next Page &#187;</a>
+          </div>
+        {/block:NextPage}
+        {block:PreviousPage}
+          <div id="prepage">
+            <a href="{PreviousPage}">&#171; Previous Page</a>
+          </div>
+        {/block:PreviousPage}
+      </div>
+    </div>
+  </body>
+</html>
