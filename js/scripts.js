@@ -10,8 +10,9 @@ $('.editor-tab').on('click', function () {
   $('.editor-wrapper').toggleClass('editor--view');
 });
 var preview = document.getElementById('preview');
-
 var interval;
+var userTitle = "foo";
+var userDescription = "bar";
 var editor = CodeMirror(document.getElementById('editor'), {
   value: "",
   mode: "text/html",
@@ -25,84 +26,78 @@ editor.on('change', function () {
   clearTimeout(interval);
   interval = setTimeout(update, 500);
 });
+var tumblrBlocks = function (value) {
+  var results = "";
 
+  HTMLParser(value, {
+    start: function( tag, attrs, unary ) {
+      results += "<" + tag;
+      for ( var i = 0; i < attrs.length; i++ )
+        results += " " + attrs[i].name + '="' + attrs[i].escaped + '"';
+      results += (unary ? "/" : "") + ">";
+    },
+    end: function( tag ) {
+      results += "</" + tag + ">";
+    },
+    chars: function( text ) {
+      if (text == '{Title}') {
+        text = userTitle;
+      }
+      if (text == '{Description}') {
+        text = userDescription;
+      }
+      results += text;
+    },
+    comment: function( text ) {
+      results += "<!--" + text + "-->";
+    }
+  });
+  return results;
+};
+var saveUserChanges = function (value) {
+  var results = "";
+
+  HTMLParser(value, {
+    start: function( tag, attrs, unary ) {
+      results += "<" + tag;
+
+      for ( var i = 0; i < attrs.length; i++ )
+        results += " " + attrs[i].name + '="' + attrs[i].escaped + '"';
+
+        results += (unary ? "/" : "") + ">";
+      },
+      end: function( tag ) {
+        results += "</" + tag + ">";
+      },
+      chars: function( text ) {
+        results += text;
+      },
+      comment: function( text ) {
+        results += "<!--" + text + "-->";
+      }
+  });
+  return results;
+};
 var update = function () {
   var value = editor.getValue();
-  if ( validate( value ) ) {
-    // remove previous iframe
-    if ( preview.children.length > 0 ) {
-      preview.removeChild( preview.firstChild );
-    }
-    //
-    var iframe = document.createElement( 'iframe' );
-    iframe.style.width = '100%';
-    iframe.style.height = '100%';
-    iframe.style.border = '0';
-    preview.appendChild( iframe );
-    var content = iframe.contentDocument || iframe.contentWindow.document;
-    // workaround for chrome bug
-    // http://code.google.com/p/chromium/issues/detail?id=35980#c12
-    value = value.replace( '<script>', '<script>if ( window.innerWidth === 0 ) { window.innerWidth = parent.innerWidth; window.innerHeight = parent.innerHeight; }' );
-    content.open();
-    content.write( value );
-    content.close();
+  // remove previous iframe
+  if ( preview.children.length > 0 ) {
+    preview.removeChild( preview.firstChild );
   }
-};
-var errorLines = [];
-var widgets = [];
-var validate = function ( value ) {
-  return editor.operation( function () {
-    while ( errorLines.length > 0 ) {
-      editor.removeLineClass( errorLines.shift(), 'background', 'errorLine' );
-    }
-    for ( var i = 0; i < widgets.length; i ++ ) {
-      editor.removeLineWidget( widgets[ i ] );
-    }
-    widgets.length = 0;
-    // remove html
-    var string = '\n';
-    var lines = value.split( '\n' );
-    var lineCurrent = 0, lineTotal = lines.length;
-    while ( lineCurrent < lineTotal && lines[ lineCurrent ].indexOf( '<script>' ) === -1 ) {
-      string += '\n';
-      lineCurrent ++;
-    }
-    var lineStart = lineCurrent ++;
-    while ( lineCurrent < lineTotal && lines[ lineCurrent ].indexOf( '<\/script>' ) === -1 ) {
-      string += lines[ lineCurrent ] + '\n';
-      lineCurrent ++;
-    }
-    //
-    try {
-      var result = esprima.parse( string, { tolerant: true } ).errors;
-      for ( var i = 0; i < result.length; i ++ ) {
-        var error = result[ i ];
-        var message = document.createElement( 'div' );
-        message.className = 'esprima-error';
-        message.textContent = error.message.replace(/Line [0-9]+: /, '');
-        var lineNumber = error.lineNumber - 1;
-        errorLines.push( lineNumber );
-        editor.addLineClass( lineNumber, 'background', 'errorLine' );
-        var widget = editor.addLineWidget(
-          lineNumber,
-          message
-        );
-        widgets.push( widget );
-      }
-    } catch ( error ) {
-      var message = document.createElement( 'div' );
-      message.className = 'esprima-error';
-      message.textContent = error.message.replace(/Line [0-9]+: /, '');
-      var lineNumber = error.lineNumber - 1;
-      errorLines.push( lineNumber );
-      editor.addLineClass( lineNumber, 'background', 'errorLine' );
-      var widget = editor.addLineWidget(
-        lineNumber,
-        message
-      );
-      widgets.push( widget );
-    }
-    return errorLines.length === 0;
-  });
+  //
+  var iframe = document.createElement( 'iframe' );
+  iframe.style.width = '100%';
+  iframe.style.height = '100%';
+  iframe.style.border = '0';
+  preview.appendChild( iframe );
+  var content = iframe.contentDocument || iframe.contentWindow.document;
+  // workaround for chrome bug
+  // http://code.google.com/p/chromium/issues/detail?id=35980#c12
+  value = value.replace( '<script>', '<script>if ( window.innerWidth === 0 ) { window.innerWidth = parent.innerWidth; window.innerHeight = parent.innerHeight; }' );
+  value = tumblrBlocks(value);
+  value = saveUserChanges(value);
+  content.open();
+  content.write( value );
+  content.close();
 };
 update();
