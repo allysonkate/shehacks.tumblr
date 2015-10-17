@@ -132,7 +132,7 @@ h1.splash__head {
 .editor-wrapper .editor-tab {
   height: 40px;
   width: 40px;
-  border-radius: 50%;
+  border-radius: 0 0 0 10px;
   font-size: 1.5em;
   font-weight: bold;
 }
@@ -141,9 +141,17 @@ h1.splash__head {
 }
 .editor--active .editor-tab:before {
   content:"\00d7";
+  position: relative;
+  top: -9px;
+  left: 0px;
+  font-size: 1.5em;
 }
 .editor--view .editor-tab:before {
   content:"\203A";
+  position: relative;
+  top: -12px;
+  left: 2px;
+  font-size: 1.5em;
 }
 #editor .CodeMirror {
   height: 100%;
