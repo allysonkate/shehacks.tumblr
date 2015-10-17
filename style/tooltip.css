@@ -19,6 +19,8 @@
 .tool-tip__info {
   position: absolute;
   display: none;
+  font-family: 'Open-Sans', sans-serif;
+  font-weight: 300;
   min-width: 225px;
   max-width: 300px;
   background: #ae0bd7;
