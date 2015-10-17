@@ -17,6 +17,14 @@ var script = {
   act4:{
     code: '<html>\n\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body>\n\n\n\t</body>\n\n</html>',
     copy: 'here is a <div class="tool-tip"><div class="tool-tip__inner">body</div><div class="tool-tip__info">Here is information about what a body tag is!</div></div> tag'
+  },
+  act5:{
+    code:'',
+    copy:''
+  },
+  act6:{
+    code:'',
+    copy:''
   }
 }
 function getHTMLSample( num, fileName ){
@@ -33,6 +41,7 @@ getHTMLSample( 2, "code/two.html");
 getHTMLSample( 3, "code/three.html");
 getHTMLSample( 4, "code/four.html");
 getHTMLSample( 5, "code/five.html");
+getHTMLSample( 6, "code/six.html");
 
 function getCopySample( num, fileName ){
   var string = '';
@@ -49,6 +58,7 @@ getCopySample( 2, "copy/two.html");
 getCopySample( 3, "copy/three.html");
 getCopySample( 4, "copy/four.html");
 getCopySample( 5, "copy/five.html");
+getCopySample( 6, "copy/six.html");
 
 Object.size = function(obj) {
   var size = 0, key;
