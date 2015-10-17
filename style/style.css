@@ -8,6 +8,16 @@ body {
   -ms-user-select: none;
   user-select: none;
 }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
 body {
   position: relative;
   height: 100vh;
@@ -15,15 +25,18 @@ body {
   overflow: hidden;
   margin: 0;
   padding: 0;
-  background: #00aeef;
+  background: #ae0bd7;
   font-family: sans-serif;
+}
+button:active,
+button:focus {
+  outline: 0;
 }
 .preview {
   position: absolute;
   width: 100vw;
   height: 100vh;
   z-index: 20;
-  background: #ae0bd7;
 }
 .splash {
   position: relative;

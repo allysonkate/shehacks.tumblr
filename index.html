@@ -4,6 +4,7 @@
     <link href="js/codemirror/codemirror.css" rel="stylesheet">
     <link href="style/style.css" type="text/css" rel="stylesheet">
     <link href="style/helper.css" rel="stylesheet">
+    <link href="style/tooltip.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
@@ -17,7 +18,7 @@
         </h1>
         <p class="splash__body">
           Society has made it seem like coding a website is too hard for girls. But we know that girls can literally do whatever they want. <br><br>
-          Did you know that learning how to customize your tumblr theme is an easy way to understand how code works? With our help, you can make the internet into a place that you want it to be.
+          Did you know that learning how to customize your Tumblr theme is an easy way to understand how code works? With our help, you can make the internet into a place that you want it to be.
         </p>
         <button class="btn" id="splash-btn">
           Let's Go!
@@ -28,12 +29,16 @@
     <div class="helper-wrapper helper--view">
       <div class="helper" id="helper">
         <div class="helper-txt" id="helper-txt">
-          This is the helper!
+          This is the <div class="tool-tip"><div class="tool-tip__inner">helper</div><div class="tool-tip__info">Here is information about what a helper is!</div></div>. Lorem Ipsum dolor sit amet. Lorem Ipsum dolor sit amet. Lorem Ipsum dolor sit amet.
         </div>
       </div>
       <div class="helper-nav">
-        <button class="prev" id="helper-prev">Prev</button>
-        <button class="next" id="helper-next">Next</button>
+        <button class="prev" id="helper-prev">
+          <span class="sr-only">Prev</span>
+        </button>
+        <button class="next" id="helper-next">
+          <span class="sr-only">Next</span>
+        </button>
       </div>
       <button class="btn helper-tab">&times;</button>
     </div>
@@ -50,5 +55,6 @@
     <script src="https://cdn.rawgit.com/jquery/esprima/2.6.0/esprima.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/narrative.js"></script>
+    <script src="js/parsing.js"></script>
   </body>
 </html>
