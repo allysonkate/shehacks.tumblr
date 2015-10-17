@@ -24,6 +24,8 @@
   -moz-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
+
+  opacity: 0;
 }
 .helper h2 {
   font-family: 'Bree Serif', sans-serif;
@@ -32,11 +34,14 @@
 .helper--active {
   bottom: 0;
 }
+.helper--view .helper {
+  opacity: 1;
+}
 .editor--view {
   left: -48%;
 }
 .helper--view {
-  height: 33%;
+  height: 40%;
 }
 .helper-txt {
   opacity: 0;
@@ -95,8 +100,8 @@
   left: 0;
   width: 100%;
   text-align: center;
+  opacity: 0;
 }
-
 .prev,
 .next {
   -webkit-appearance: none;
@@ -105,6 +110,9 @@
   background: transparent;
   border: none;
   font-size: 2em;
+}
+.helper--view .helper-nav{
+  opacity: 1;
 }
 .prev:after {
   content: "\2039";
@@ -117,7 +125,6 @@
   font-size: 1.5em;
   display: block;
   margin-top: 20px;
-
 }
 
 .prev:hover {

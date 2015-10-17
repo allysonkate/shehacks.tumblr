@@ -37,6 +37,7 @@ button:focus {
   width: 100vw;
   height: 100vh;
   z-index: 20;
+  padding: 3em 5em;
 }
 .splash {
   position: relative;
