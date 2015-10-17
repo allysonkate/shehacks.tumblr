@@ -1,3 +1,13 @@
+html,
+body {
+  height: 100%;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 body {
   position: relative;
   margin: 0;
@@ -65,4 +75,28 @@ body {
 }
 .editor--active {
   left: 0;
+}
+#editor .CodeMirror {
+  height: 100%;
+  font-size: 16px;
+  background-color: #272822;
+
+  -webkit-transform: translateZ(0); /* Workaround for OSX antialias issue */
+}
+#editor .CodeMirror-scroll {
+  height: 100%;
+}
+#editor .CodeMirror div.CodeMirror-selected {
+  background: rgba(0,0,0,0.1);
+}
+#editor .CodeMirror-focused div.CodeMirror-selected {
+  background: rgba(186,186,186,0.1);
+}
+#editor .CodeMirror .errorLine {
+  background: rgba(255,0,0,0.25);
+}
+#editor .CodeMirror .esprima-error {
+  color: #f00;
+  text-align: right;
+  padding: 0px 20px;
 }
