@@ -29,6 +29,10 @@ var script = {
   act7:{
     code:'',
     copy:''
+  },
+  act8:{
+    code:'',
+    copy:''
   }
 }
 function getHTMLSample( num, fileName ){
@@ -47,6 +51,7 @@ getHTMLSample( 4, "code/four.html");
 getHTMLSample( 5, "code/five.html");
 getHTMLSample( 6, "code/six.html");
 getHTMLSample( 7, "code/seven.html");
+getHTMLSample( 8, "code/eight.html");
 
 function getCopySample( num, fileName ){
   var string = '';
@@ -65,6 +70,7 @@ getCopySample( 4, "copy/four.html");
 getCopySample( 5, "copy/five.html");
 getCopySample( 6, "copy/six.html");
 getCopySample( 7, "copy/seven.html");
+getCopySample( 8, "copy/eight.html");
 
 Object.size = function(obj) {
   var size = 0, key;
