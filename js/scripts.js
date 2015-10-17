@@ -13,7 +13,7 @@ var preview = document.getElementById('preview');
 
 var interval;
 var editor = CodeMirror(document.getElementById('editor'), {
-  value: "<html>\n</html>",
+  value: "",
   mode: "text/html",
   lineNumbers: true,
   matchBrackets: true,

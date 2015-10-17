@@ -15,15 +15,18 @@ body {
   overflow: hidden;
   margin: 0;
   padding: 0;
-  background: #00aeef;
+  background: #ae0bd7;
   font-family: sans-serif;
+}
+button:active,
+button:focus {
+  outline: 0;
 }
 .preview {
   position: absolute;
   width: 100vw;
   height: 100vh;
   z-index: 20;
-  background: #ae0bd7;
 }
 .splash {
   position: relative;
