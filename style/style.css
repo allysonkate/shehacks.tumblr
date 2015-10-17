@@ -63,6 +63,7 @@ h1.splash__head {
   color: #fff;
 }
 .splash__body {
+  font-family: 'Open Sans', sans-serif;
   margin: 2em 0;
   font-weight: lighter;
   font-size: 1.25em;
@@ -75,8 +76,8 @@ h1.splash__head {
   border: none;
   padding: 5px 10px;
   background: #00aeef;
-  font-family: 'Dosis', sans-serif;
-  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
   color: #fff;
   font-size: 1.5em;
   border-radius: 15px;
