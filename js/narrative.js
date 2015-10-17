@@ -1,15 +1,15 @@
 var script = {
   act1: {
-    code: '<html>\n</html>',
+    code: '<html>\n\n\n</html>',
     copy: 'here is an html tag'
   },
   act2:{
-    code: '<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n</html>',
+    code: '<html>\n\n\t<head>\n\t\t<title></title>\n\t</head>\n\n</html>',
     copy: 'here is a head tag'
   },
   act3:{
-    code: '<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body>\n\n\n\t</body>\n</html>',
-    copy: 'here is a body tag'
+    code: '<html>\n\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body>\n\n\n\t</body>\n\n</html>',
+    copy: 'here is a <div class="tool-tip"><div class="tool-tip__inner">body</div><div class="tool-tip__info">Here is information about what a body tag is!</div></div> tag'
   }
 }
 Object.size = function(obj) {
@@ -23,8 +23,7 @@ Object.size = function(obj) {
 var currentAct = 0;
 
 function newAct( num ){
-  $('#helper').text( script['act'+num].copy );
-  // $('#editor').text( script['act'+num].code );
+  $('#helper').html( script['act'+num].copy );
   editor.setValue( script['act'+num].code );
 }
 
