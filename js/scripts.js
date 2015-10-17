@@ -21,7 +21,6 @@ var editor = CodeMirror(document.getElementById('editor'), {
   tabSize: 4,
   indentUnit: 4
 });
-console.log(editor);
 editor.on('change', function () {
   clearTimeout(interval);
   interval = setTimeout(update, 500);
