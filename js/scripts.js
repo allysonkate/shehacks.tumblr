@@ -11,8 +11,8 @@ $('.editor-tab').on('click', function () {
 });
 var preview = document.getElementById('preview');
 var interval;
-var userTitle = "foo";
-var userDescription = "bar";
+var userTitle = "Title";
+var userDescription = "Description";
 var editor = CodeMirror(document.getElementById('editor'), {
   // value: "<html><head><style>h1{color:red}</style></head><body><h1>hello</html>",
   value: '',
@@ -41,11 +41,12 @@ var tumblrBlocks = function (value) {
       results += "</" + tag + ">";
     },
     chars: function( text ) {
-      if (text == '{Title}') {
-        text = userTitle;
-      }
       if (text == '{Description}') {
         text = userDescription;
+      }
+      if (text == '{Title}') {
+        text = userTitle;
+        console.log('success');
       }
       results += text;
     },
@@ -53,6 +54,7 @@ var tumblrBlocks = function (value) {
       results += "<!--" + text + "-->";
     }
   });
+  console.log(results);
   return results;
 };
 var saveUserChanges = function (value) {
@@ -81,7 +83,6 @@ var saveUserChanges = function (value) {
 };
 var update = function () {
   var value = editor.getValue();
-  // value = tumblrBlocks(value);
   // remove previous iframe
   if ( preview.children.length > 0 ) {
     preview.removeChild( preview.firstChild );
@@ -97,6 +98,7 @@ var update = function () {
   // http://code.google.com/p/chromium/issues/detail?id=35980#c12
   value = value.replace( '<script>', '<script>if ( window.innerWidth === 0 ) { window.innerWidth = parent.innerWidth; window.innerHeight = parent.innerHeight; }' );
   // value = saveUserChanges(value);
+  value = tumblrBlocks(value);
   content.open();
   content.write( value );
   content.close();
