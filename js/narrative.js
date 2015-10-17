@@ -47,6 +47,7 @@ function getCopySample( num, fileName ){
 getCopySample( 1, "copy/one.html");
 getCopySample( 2, "copy/two.html");
 getCopySample( 3, "copy/three.html");
+getCopySample( 4, "copy/four.html");
 getCopySample( 5, "copy/five.html");
 
 Object.size = function(obj) {
