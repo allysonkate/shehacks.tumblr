@@ -25,7 +25,7 @@ font-size: 16px;
   position: absolute;
   font-family: 'Open-Sans', sans-serif;
   font-weight: 300;
-  margin-bottom: 40px;
+  width: 70%;
   top: 40%;
   left: 50%;
 
@@ -142,4 +142,21 @@ font-size: 16px;
 
 .next:hover {
   color: #00aeef;
+}
+
+input[type="text"] {
+  padding: 7px;
+  border: solid 3px #00aeef;
+  background-color: rgba(0, 174, 239, 0.2);
+  border-radius: 10px;
+  transition: border 0.3s;
+  font-size: 0.85em;
+}
+input[type="text"]:focus,
+input[type="text"].focus {
+  border: solid 3px #00aeef;
+}
+
+.helper label{
+  display: inline-block;
 }
