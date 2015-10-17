@@ -100,6 +100,10 @@ $('#helper-next').on('click',function(){
   if (currentAct > Object.size(script)) {
     currentAct = Object.size(script);
   };
+  if (currentAct == 8) {
+    userTitle = $('#title').val();
+    userDescription = $('#description').val();
+  }
   newAct( currentAct );
 });
 
