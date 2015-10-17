@@ -12,9 +12,22 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
-
   font-family: sans-serif;
+  background-image: url('../img/desktop.jpeg');
+  background-size: 100% auto;
 }
+
+body::after {
+    content: "";
+    background: rgba(174, 11, 215, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
 .preview {
   position: absolute;
   width: 100vw;
@@ -39,13 +52,17 @@ h1.splash__head {
   font-family: 'Bree Serif', sans-serif;
   font-weight: normal;
   font-size: 72px;
+  color: #fff;
 }
 .splash__body {
   margin: 2em 0;
   font-weight: lighter;
   font-size: 1.25em;
   line-height: 1.25;
+  color: #fff;
 }
+
+
 .btn {
   appearance: none;
   border: none;
@@ -64,6 +81,12 @@ h1.splash__head {
   -ms-transition: all .2s ease;
   transition: all .2s ease;
 }
+
+#splash-btn {
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
 .btn:hover {
   background: #666;
 }
