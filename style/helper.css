@@ -36,6 +36,8 @@
 }
 .helper-txt {
   opacity: 0;
+  font-family: 'Open-Sans', sans-serif;
+  font-weight: 300;
   -webkit-transition: all .2s ease;
   -moz-transition: all .2s ease;
   -ms-transition: all .2s ease;
@@ -70,10 +72,10 @@
   font-size: 2em;
 }
 .prev:after {
-  content: '\2190';
+  content: "\2039";
   display: block;
 }
 .next:after {
-  content: '\2192';
+  content: '\203a';
   display: block;
 }
