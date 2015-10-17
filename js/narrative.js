@@ -24,7 +24,6 @@ var currentAct = 0;
 
 function newAct( num ){
   $('#helper').html( script['act'+num].copy );
-  // $('#editor').text( script['act'+num].code );
   editor.setValue( script['act'+num].code );
 }
 
