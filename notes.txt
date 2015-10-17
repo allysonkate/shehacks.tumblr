@@ -1,0 +1,42 @@
+what's your product?
+  - empower young ladies to know their own technology, digitally literate, foster a desire to learn more. working in a space where they already are. we know this problem exists & that's what we're addressing
+  - one overwhelming solution, or just copy and paste, we're looking for a middle ground & one that appeals to girls. encourage them to tinker! using a platform they use daily. go a layer deeper.
+  - people are already looking for this
+    - seo, sem
+    - reachout to tumblr, tumblr adspace
+    - tumblr has a lady ceo
+    - contest
+
+simplest thing we can build that provides value:
+  - html editor w/ live w/ some info
+  -
+
+feature list
+  - splash page
+    - intro
+      - alludes to girls in code
+
+  - editor
+    - live product
+    - html editor
+    - information about code
+    - a way to take code from here to tumblr
+
+  - accessories
+    - cursor trails, music, gifs, video
+    - toggle posts
+    - these are posts, we'll have followers!
+    - fonts
+    - followers // myspace top 8
+    - which way do you want to go?
+
+  - ask me for accessories
+
+  - full outfit w/ a walkthrough
+    - potential combos made using our tools
+    - randomizes which things we are using
+    - backwards timelapse??
+
+  - user submissions
+
+  - featuring user submissions
