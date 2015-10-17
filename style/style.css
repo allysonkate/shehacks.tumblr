@@ -10,23 +10,14 @@ body {
 }
 body {
   position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-image: url('../img/desktop.jpeg');
-  background-size: 100% auto;
 }
 
-body::after {
-    content: "";
-    background: rgba(174, 11, 215, 0.8);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-}
 
 .preview {
   position: absolute;
@@ -35,16 +26,31 @@ body::after {
   z-index: 20;
 }
 .splash {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../img/desktop.jpeg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.splash_content {
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: 1000;
+  width: 600px;
   text-align: center;
   -webkit-transform: translate(-50%,-50%);
   -moz-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
 }
+
 .splash__head {
   margin: 0;
 }
