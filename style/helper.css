@@ -25,6 +25,11 @@
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
 }
+.helper h2 {
+  font-family: 'Bree Serif', sans-serif;
+  font-size: 1.75em;
+  text-align: center;
+}
 .helper--active {
   bottom: 0;
 }
@@ -38,6 +43,7 @@
   opacity: 0;
   font-family: 'Open-Sans', sans-serif;
   font-weight: 300;
+  margin-bottom: 30px;
   -webkit-transition: all .2s ease;
   -moz-transition: all .2s ease;
   -ms-transition: all .2s ease;
@@ -89,7 +95,9 @@
   bottom: 0;
   left: 0;
   width: 100%;
+  text-align: center;
 }
+
 .prev,
 .next {
   -webkit-appearance: none;
@@ -101,9 +109,22 @@
 }
 .prev:after {
   content: "\2039";
+  font-size: 1.5em;
   display: block;
+  margin-top: 20px;
 }
 .next:after {
   content: '\203a';
+  font-size: 1.5em;
   display: block;
+  margin-top: 20px;
+
+}
+
+.prev:hover {
+  color: #00aeef;
+}
+
+.next:hover {
+  color: #00aeef;
 }
