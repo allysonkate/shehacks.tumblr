@@ -36,15 +36,28 @@ body {
 .splash__head {
   margin: 0;
 }
+h1.splash__head {
+  font-family: 'Bree Serif', sans-serif;
+  font-weight: normal;
+  font-size: 72px;
+}
 .splash__body {
-  margin: 0;
+  margin: 2em 0;
+  font-weight: lighter;
+  font-size: 1.25em;
+  line-height: 1.25;
 }
 .splash__btn {
   appearance: none;
   border: none;
-  padding: 1em;
-  background: #CCC;
-
+  padding: 5px 10px;
+  background: #00aeef;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 600;
+  color: #fff;
+  font-size: 1.5em;
+  border-radius: 15px;
+  width: 10em;
   cursor: pointer;
 
   -webkit-transition: all .2s ease;
