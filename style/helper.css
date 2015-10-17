@@ -25,6 +25,11 @@
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
 }
+.helper h2 {
+  font-family: 'Bree Serif', sans-serif;
+  font-size: 1.75em;
+  text-align: center;
+}
 .helper--active {
   bottom: 0;
 }
