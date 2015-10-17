@@ -6,8 +6,8 @@
   width: 50vw;
   height: 2em;
 
-  background: rgb(255, 255, 255); 
-  background: rgba(255, 255, 255, .8); 
+  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, .8);
 
   -webkit-transition: all .2s ease;
   -moz-transition: all .2s ease;
@@ -64,4 +64,16 @@
 .next {
   -webkit-appearance: none;
   appearance: none;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-size: 2em;
+}
+.prev:after {
+  content: '\2190';
+  display: block;
+}
+.next:after {
+  content: '\2192';
+  display: block;
 }
