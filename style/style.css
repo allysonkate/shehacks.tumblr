@@ -15,15 +15,15 @@ body {
   overflow: hidden;
   margin: 0;
   padding: 0;
+  background: #00aeef;
   font-family: sans-serif;
 }
-
-
 .preview {
   position: absolute;
   width: 100vw;
   height: 100vh;
   z-index: 20;
+  background: #ae0bd7;
 }
 .splash {
   position: relative;
@@ -38,7 +38,6 @@ body {
   background-repeat: no-repeat;
   text-align: center;
 }
-
 .splash_content {
   position: absolute;
   top: 50%;
@@ -67,9 +66,8 @@ h1.splash__head {
   line-height: 1.25;
   color: #fff;
 }
-
-
 .btn {
+  -webkit-appearance: none;
   appearance: none;
   border: none;
   padding: 5px 10px;
@@ -81,18 +79,19 @@ h1.splash__head {
   border-radius: 15px;
   width: 10em;
   cursor: pointer;
-
   -webkit-transition: all .2s ease;
   -moz-transition: all .2s ease;
   -ms-transition: all .2s ease;
   transition: all .2s ease;
 }
-
+.btn:active,
+.btn:focus {
+  outline: 0;
+}
 #splash-btn {
   padding: 10px 20px;
   border-radius: 20px;
 }
-
 .btn:hover {
   background: #666;
 }
@@ -121,7 +120,6 @@ h1.splash__head {
   height: 100%;
   font-size: 16px;
   background-color: #272822;
-
   -webkit-transform: translateZ(0); /* Workaround for OSX antialias issue */
 }
 #editor .CodeMirror-scroll {

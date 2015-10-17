@@ -1,7 +1,6 @@
 <!DOCTYPE html>
   <head>
     <title>SheHacksTumblr</title>
-
     <link href="js/codemirror/codemirror.css" rel="stylesheet">
     <link href="style/style.css" type="text/css" rel="stylesheet">
     <link href="style/helper.css" rel="stylesheet">
@@ -25,8 +24,16 @@
       </div>
     </div>
     <div class="preview" id="preview"></div>
-    <div class="helper-wrapper">
-      <div class="helper"></div>
+    <div class="helper-wrapper helper--view">
+      <div class="helper" id="helper">
+        <div class="helper-txt" id="helper-txt">
+          This is the helper!
+        </div>
+      </div>
+      <div class="helper-nav">
+        <button class="prev" id="helper-prev">Prev</button>
+        <button class="next" id="helper-next">Next</button>
+      </div>
       <button class="btn helper-tab">&times;</button>
     </div>
     <div class="editor-wrapper">
@@ -41,5 +48,6 @@
     <script src="js/codemirror/mode/htmlmixed.js"></script>
     <script src="https://cdn.rawgit.com/jquery/esprima/2.6.0/esprima.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/narrative.js"></script>
   </body>
 </html>

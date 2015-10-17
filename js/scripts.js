@@ -13,7 +13,7 @@ var preview = document.getElementById('preview');
 
 var interval;
 var editor = CodeMirror(document.getElementById('editor'), {
-  value: "<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body>\n\n\n\t</body>\n</html>",
+  value: "<html>\n</html>",
   mode: "text/html",
   lineNumbers: true,
   matchBrackets: true,
@@ -21,7 +21,6 @@ var editor = CodeMirror(document.getElementById('editor'), {
   tabSize: 4,
   indentUnit: 4
 });
-console.log(editor);
 editor.on('change', function () {
   clearTimeout(interval);
   interval = setTimeout(update, 500);
