@@ -89,9 +89,7 @@ h1.splash__head {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   color: #fff;
-  font-size: 1.5em;
   border-radius: 15px;
-  width: 10em;
   cursor: pointer;
   -webkit-transition: all .2s ease;
   -moz-transition: all .2s ease;
@@ -105,10 +103,13 @@ h1.splash__head {
 #splash-btn {
   padding: 10px 20px;
   border-radius: 20px;
+  width: 10em;
+  font-size: 1.5em;
 }
 .btn:hover {
   background: #666;
 }
+
 .editor-wrapper {
   position: absolute;
   top: 0;
@@ -127,8 +128,21 @@ h1.splash__head {
   -ms-transition: all .2s ease;
   transition: all .2s ease;
 }
+.editor-wrapper .editor-tab {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  font-size: 1.5em;
+  font-weight: bold;
+}
 .editor--active {
   left: 0;
+}
+.editor--active .editor-tab:before {
+  content:"\00d7";
+}
+.editor--view .editor-tab:before {
+  content:"\203A";
 }
 #editor .CodeMirror {
   height: 100%;
