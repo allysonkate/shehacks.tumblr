@@ -107,7 +107,8 @@ h1.splash__head {
   font-size: 1.5em;
 }
 .btn:hover {
-  background: #666;
+  background: #fff;
+  color: #ae0bd7;
 }
 
 .editor-wrapper {
