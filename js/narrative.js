@@ -4,7 +4,7 @@ var script = {
     copy: 'here is an html tag'
   },
   act2:{
-    code: '<html>\n\t<head>\n\t\t<title></title>\n\t</head></html>',
+    code: '<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n</html>',
     copy: 'here is a head tag'
   },
   act3:{

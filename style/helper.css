@@ -3,12 +3,9 @@
   bottom: -2em;
   right: 0;
   z-index: 100;
-
   width: 50vw;
   height: 2em;
-
   background: #fff;
-
   -webkit-transition: all .2s ease;
   -moz-transition: all .2s ease;
   -ms-transition: all .2s ease;
@@ -31,7 +28,17 @@
   left: -48%;
 }
 .helper--view {
-  height: 25em;
+  height: 33%;
+}
+.helper-txt {
+  opacity: 0;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  transition: all .2s ease;
+}
+.helper--view .helper-txt {
+  opacity: 1;
 }
 .helper-tab {
   position: absolute;
