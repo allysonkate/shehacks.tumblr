@@ -1,0 +1,35 @@
+.helper-wrapper {
+  position: absolute;
+  bottom: -2em;
+  right: 0;
+  z-index: 100;
+
+  width: 50vw;
+  height: 2em;
+
+  background: blue;
+
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  transition: all .2s ease;
+}
+.helper--active {
+  bottom: 0;
+}
+.editor--view {
+  left: -48%;
+}
+.helper--view {
+  height: 25em;
+}
+.helper-tab {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.editor-tab {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

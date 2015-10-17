@@ -4,27 +4,36 @@
 
     <link href="js/codemirror/codemirror.css" rel="stylesheet">
     <link href="style/style.css" rel="stylesheet">
+    <link href="style/helper.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <div class="preview" id="preview">
-      <div class="splash-inner">
-        <h1 class="splash__head">
-          Intro Stuff
-        </h1>
-        <p class="splash__body">
-          Text about the intro
-        </p>
-        <button class="splash__btn">
-          Go Do Stuff!
-        </button>
-      </div>
+    <div class="splash">
+      <h1 class="splash__head">
+        Intro Stuff
+      </h1>
+      <p class="splash__body">
+        Text about the intro
+      </p>
+      <button class="btn" id="splash-btn">
+        Go Do Stuff!
+      </button>
     </div>
-    <div class="editor" id="editor">
+    <div class="helper-wrapper">
+      <div class="helper"></div>
+      <button class="btn helper-tab">&times;</button>
+    </div>
+    <div class="preview" id="preview"></div>
+    <div class="editor-wrapper">
+      <div class="editor" id="editor"></div>
+      <button class="btn editor-tab">&times;</button>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
     <script src="js/codemirror/codemirror.js"></script>
     <script src="js/codemirror/mode/xml.js"></script>
+    <script src="js/codemirror/mode/css.js"></script>
+    <script src="js/codemirror/mode/javascript.js"></script>
+    <script src="js/codemirror/mode/htmlmixed.js"></script>
     <script src="https://cdn.rawgit.com/jquery/esprima/2.6.0/esprima.js"></script>
     <script src="js/scripts.js"></script>
   </body>

@@ -21,13 +21,12 @@ body {
   height: 100vh;
   z-index: 20;
 }
-.splash-inner {
+.splash {
   position: absolute;
   top: 50%;
   left: 50%;
-
+  z-index: 1000;
   text-align: center;
-
   -webkit-transform: translate(-50%,-50%);
   -moz-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
@@ -39,7 +38,7 @@ body {
 .splash__body {
   margin: 0;
 }
-.splash__btn {
+.btn {
   appearance: none;
   border: none;
   padding: 1em;
@@ -52,10 +51,10 @@ body {
   -ms-transition: all .2s ease;
   transition: all .2s ease;
 }
-.splash__btn:hover {
+.btn:hover {
   background: #666;
 }
-.editor {
+.editor-wrapper {
   position: absolute;
   top: 0;
   left: -100vw;

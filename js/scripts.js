@@ -1,12 +1,19 @@
-$('.btn').on('click', function() {
-  $(this).find('.editor').toggleClass('editor--active');
+$('#splash-btn').on('click', function() {
+  $('.editor-wrapper').toggleClass('editor--active');
+  $('.helper-wrapper').toggleClass('helper--active');
+  $('.splash').fadeOut(200);
 });
-
+$('.helper-tab').on('click', function () {
+  $('.helper-wrapper').toggleClass('helper--view');
+});
+$('.editor-tab').on('click', function () {
+  $('.editor-wrapper').toggleClass('editor--view');
+});
 var preview = document.getElementById('preview');
 
 var interval;
 var editor = CodeMirror(document.getElementById('editor'), {
-  value: "<html>foo</html>",
+  value: "<html>\n\t<head>\n\t\t<title></title>\n\t</head>\n\t<body>\n\n\n\t</body>\n</html>",
   mode: "text/html",
   lineNumbers: true,
   matchBrackets: true,
